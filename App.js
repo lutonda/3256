@@ -12,6 +12,8 @@ import useLinking from './navigation/useLinking';
 const Stack = createStackNavigator();
 
 export default function App(props) {
+  
+
   const [isLoadingComplete, setLoadingComplete] = React.useState(false);
   const [initialNavigationState, setInitialNavigationState] = React.useState();
   const containerRef = React.useRef();
@@ -20,6 +22,7 @@ export default function App(props) {
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {
     async function loadResourcesAndDataAsync() {
+      
       try {
         SplashScreen.preventAutoHide();
 

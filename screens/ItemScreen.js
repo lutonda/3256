@@ -4,8 +4,37 @@ import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 import {List, ListItem } from 'native-base';
 import { MonoText } from '../components/StyledText';
+import Hymn from '../models/hymn';
+import Verse from '../models/verse';
 
 export default function ItemScreen() {
+  async function init(){
+    //let hymn=new Hymn();
+    alert(10)
+
+    Verse.createTable().then(rows => rows)
+    Hymn.createTable().then(rows => rows)
+
+    const pr = {
+      number: 1,
+      title: "SANTO! Santo! Santo! Deus omnipotente"
+    }
+     
+    var i=Hymn.create(pr).then((rows) => rows).catch(er=>{
+      console.log('++++++++++++++++++++++++++++++++++++')
+      console.log(er)
+    })
+
+    console.log('*************************************')
+    console.log(i)
+    var hym= await Hymn.find(1);
+    alert(hym)
+    console.log(hym)
+    alert(2)
+  }
+
+  init();
+  
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>

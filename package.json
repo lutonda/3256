@@ -22,6 +22,8 @@
     "expo-asset": "~8.0.0",
     "expo-constants": "~8.0.0",
     "expo-font": "~8.0.0",
+    "expo-sqlite": "^8.0.0",
+    "expo-sqlite-orm": "^1.5.3",
     "expo-web-browser": "~8.0.0",
     "native-base": "^2.13.8",
     "react": "~16.9.0",
